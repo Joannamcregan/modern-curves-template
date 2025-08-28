@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'display';
-    src: url(./fonts/MagicalnightRegular-6RpA6.otf);
+    src: url(./fonts/MikeaRoundedDemoRegular-3lzYG.otf);
 }
 @font-face {
     font-family: 'regular';
-    src: url(./fonts/BinomaTrialRegular-R9Kvv.ttf);
+    src: url(./fonts/Lmsans9Regular-PKxnx.otf);
 }
 .hidden{
     display: none;
@@ -88,12 +88,12 @@ body{
     margin: 0px;
     position: relative;
     font-family: regular, sans-serif;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 100;
     max-width: 100vw;
 }
 header{
-    background: #181828;
+    background: #321f36;
     color: white;
     display: flex;
     justify-content: center;
@@ -115,12 +115,13 @@ header a{
 #site-logo{
     height: 60px;
     margin-right: 100px;
-    background: black;
+    background: #321f36;
     border-radius: 50%;
     position: absolute;
     top: -5px;
     left: 20px;
-    padding: 10px;
+    padding: 20px;
+    z-index: 1000;
 }
 @media screen and (max-width: 700px) {
     #site-logo{
@@ -129,6 +130,15 @@ header a{
     header a{
         margin: 0px 20px;
     }
+}
+#call-now{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    padding: 20px 40px 20px 60px;
+    background: #321f36;
+    border-radius: 50% 30% 30% 30%;
 }
 h1{
     font-family: display, serif;
@@ -149,25 +159,6 @@ p{
     margin: 0px auto;
     padding-bottom: 20px;
     width: 750px;
-}
-.image-wrap{
-    background: white;
-    border: solid white 10px;
-    width: 750px;
-    margin: 0px auto;
-}
-.background-image-0{
-    background-image: url(./img/background-image.jpg);
-    background-size: cover;
-    padding: 10px;
-}
-.background-image-0 p{
-    line-height: 1.5;
-    width: 100%;
-}
-.background-image-span{
-    background: black;
-    color: white;
 }
 .review-box{
     width: 750px;
@@ -231,15 +222,20 @@ p{
     white-space: nowrap;
     margin-right: 5px;
 }
+.top-image{
+    margin-top: -2px;
+}
 .color0-section{
     background: #55016a;
     color: rgb(227, 227, 227);
+    margin-top: -1px;
 }
 .color0-color1-transition{
-    background-image: linear-gradient(to right, #34292f, #523144, #2c242e, #3e2744, #282631, #2b2744);
+    background-image: linear-gradient(to right, #532540, #3f1c48, #201a48);
     width: 100vw;
     height: 300px;
     margin-bottom: -5px;
+    margin-top: -1px;
     position: relative;
 }
 .color0-color1-transition svg{
@@ -248,7 +244,8 @@ p{
     top: 0;
 }
 .color1-section{
-    background-image: linear-gradient(to right, #34292f, #582b46, #2c242e, #3e2744, #282631, #2b2744);
+    background-image: linear-gradient(to right, #532540, #3f1c48, #201a48);
+    color: white;
 }
 .color2-section{
     background: #2d2655;
