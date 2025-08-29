@@ -68,7 +68,33 @@ strong{
 #mobile-menu a{
     color: white;
 }
-@media screen and (max-width: 550px) {
+#mobile-menu-icon{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 35px;
+}
+#site-logo{
+    height: 60px;
+    margin-right: 100px;
+    background: #321f36;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    padding: 20px;
+    z-index: 1000;
+}
+#call-now{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    padding: 20px 40px 20px 60px;
+    background: #321f36;
+    border-radius: 50% 30% 30% 30%;
+}
+@media screen and (max-width: 650px) {
   .mobile{
     display: block;
   }
@@ -76,14 +102,24 @@ strong{
     display: none;
   }
 }
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 651px) {
   .mobile-menu{
     display: none;
   }
 }
-#mobile-menu-icon{
-    position: absolute;
-    right: 20px;
+@media screen and (max-width: 460px) {
+    #mobile-menu-icon{
+        max-width: 30px;
+    }
+    #call-now{
+        font-size: 20px;
+        padding: 10px 10px 20px 10px;
+        left: 90px;
+    }
+    #site-logo{
+        height: 40px;
+        padding: 10px;
+    }
 }
 .number-text{
     font-family: sans-serif;
@@ -103,49 +139,27 @@ header{
     background: #321f36;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     padding: 10px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    min-height: 30px;
 }
 header a{
     margin: 0px 30px;
     color: white;
     text-decoration: none;
-    border-bottom: solid #181828 2px;
 }
 .yellow-underline{
     border-bottom: solid #fcf9d1 2px;
 }
-#site-logo{
-    height: 60px;
-    margin-right: 100px;
-    background: #321f36;
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    left: 20px;
-    padding: 20px;
-    z-index: 1000;
-}
-@media screen and (max-width: 700px) {
-    #site-logo{
-        margin-right: 30px;
-    }
+@media screen and (max-width: 740px) {
     header a{
         margin: 0px 20px;
+        font-size: 20px;
     }
-}
-#call-now{
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 120px;
-    padding: 20px 40px 20px 60px;
-    background: #321f36;
-    border-radius: 50% 30% 30% 30%;
 }
 h1{
     font-family: display, serif;
