@@ -313,10 +313,33 @@ header a{
     color: white;
 }
 .color2-section{
-    background: #2d2655;
+    background: #222d35;
 }
 .color1-color2-transition{
-    background-image: linear-gradient(to right, #34292f, #523144, #2c242e, #3e2744, #282631, #2b2744);
+    background: #222d35;
+    height: 200px;
+    margin-top: -2px;
+    position: relative;
+    height: 100px;
+}
+.color1-color2-transition .top-curve{
+    position: absolute;
+    top: 0px;
+    background: linear-gradient(to right, #532540, #3f1c48, #201a48);
+    height: 100px;
+    width: 100%;
+    border-radius: 0% 0% 50% 50%;
+    z-index: 1500;
+}
+.color1-color2-transition .bottom-curve{
+    position: absolute;
+    top: 0px;
+    background: #532540;
+    height: 100px;
+    width: 100%;
+    border-radius: 0% 0% 0% 50%;
+    padding-bottom: 20px;
+    z-index: 1000;
 }
 .color2-color0-transition{
     background-image: linear-gradient(325deg, #777 50%, #04c4c6 50%);
@@ -466,7 +489,7 @@ footer{
 #cookie-banner{
     position: fixed;
     bottom: 0;
-    background: #392584;
+    background: #133953;
     color: white;
     width: 100%;
     box-shadow: 0px -4px 20px black;
