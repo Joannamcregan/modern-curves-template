@@ -94,13 +94,42 @@ strong{
     background: #321f36;
     border-radius: 50% 30% 30% 30%;
 }
+h1{
+    font-family: display, serif;
+    font-size: 50px;
+    margin: 0px auto;
+    padding-top: 40px;
+    width: 750px;
+}
+h2{
+    font-family: display, serif;
+    font-size: 40px;
+    margin: 0px auto;
+    padding-top: 20px;
+    width: 750px;
+    font-weight: 500;
+}
+p{
+    margin: 0px auto;
+    padding-bottom: 20px;
+    width: 750px;
+}
 @media screen and (max-width: 650px) {
-  .mobile{
-    display: block;
-  }
-  .desktop{
-    display: none;
-  }
+    body{
+        font-size: 18px !important;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 35px;
+    }
 }
 @media screen and (min-width: 651px) {
   .mobile-menu{
@@ -160,26 +189,6 @@ header a{
         margin: 0px 20px;
         font-size: 20px;
     }
-}
-h1{
-    font-family: display, serif;
-    font-size: 50px;
-    margin: 0px auto;
-    padding-top: 40px;
-    width: 750px;
-}
-h2{
-    font-family: display, serif;
-    font-size: 40px;
-    margin: 0px auto;
-    padding-top: 20px;
-    width: 750px;
-    font-weight: 500;
-}
-p{
-    margin: 0px auto;
-    padding-bottom: 20px;
-    width: 750px;
 }
 .review-box{
     width: 750px;
@@ -254,10 +263,45 @@ p{
 .color0-color1-transition{
     background-image: linear-gradient(to right, #532540, #3f1c48, #201a48);
     width: 100%;
-    height: 300px;
+    height: 400px;
     margin-bottom: -5px;
     margin-top: -1px;
     position: relative;
+}
+@media screen and (max-width: 1600px) {
+    .color0-color1-transition{
+        height: 270px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .color0-color1-transition{
+        height: 300px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .color0-color1-transition{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .color0-color1-transition{
+        height: 180px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .color0-color1-transition{
+        height: 160px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .color0-color1-transition{
+        height: 120px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .color0-color1-transition{
+        height: 80px;
+    }
 }
 .color0-color1-transition svg{
     width: 100%;
