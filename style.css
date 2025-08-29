@@ -6,6 +6,10 @@
     font-family: 'regular';
     src: url(./fonts/Lmsans9Regular-PKxnx.otf);
 }
+@font-face {
+    font-family: 'bold';
+    src: url(./fonts/Lmsans10Bold-8MVv2.otf);
+}
 .hidden{
     display: none;
 }
@@ -14,6 +18,9 @@
 }
 .fade-closed{
     animation: fade-out 1s forwards;
+}
+strong{
+    font-family: bold, sans-serif;
 }
 @keyframes fade-out {
     0%{
@@ -232,14 +239,14 @@ p{
 }
 .color0-color1-transition{
     background-image: linear-gradient(to right, #532540, #3f1c48, #201a48);
-    width: 100vw;
+    width: 100%;
     height: 300px;
     margin-bottom: -5px;
     margin-top: -1px;
     position: relative;
 }
 .color0-color1-transition svg{
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: 0;
 }
@@ -301,18 +308,6 @@ p{
     list-style-position: inside;
     background: #bbb1df;
     padding: 5px;
-}
-.yellow-box h2{
-    text-align: center;
-    background: #fcf9d1;
-    padding: 5px 10px;
-    position: relative;
-}
-.yellow-box p{
-    background: #fcf9d1;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
 }
 @media screen and (max-width: 1000px) {
     .box-container{
@@ -408,6 +403,7 @@ footer{
     right: 10px;
     height: 40px;
     width: 40px;
+    cursor: pointer;
 }
 #cookie-banner{
     position: fixed;
@@ -442,4 +438,5 @@ footer{
     color: white;
     padding: 10px 20px;
     margin: 10px;
+    cursor: pointer;
 }
