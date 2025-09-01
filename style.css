@@ -52,21 +52,25 @@ strong{
     top: 0;
     right: 0;
     width: fit-content;
-    background: #392584;
-    border: solid #9f31ad 10px;
+    background: #ffb89b;
     padding: 30px 60px;
     z-index: 1500;
     box-shadow: -2px 2px 5px black;
+    border-radius: 10px 0px 10px 30px;
+}
+#close-mobile-menu{
+    margin-top: 5px;
+    margin-right: 10px;
 }
 #mobile-menu nav{
-    margin-right: 30px;
+    margin: 50px 30px 50px 20px;
 }
 #mobile-menu p{
     width: fit-content;
     display: block;
 }
 #mobile-menu a{
-    color: white;
+    color: #321f36;
 }
 #mobile-menu-icon{
     position: absolute;
@@ -190,35 +194,28 @@ header a{
         font-size: 20px;
     }
 }
+#reviews{
+    height: 350px;
+    max-width: 750px;
+    position: relative;
+    margin: 0px auto 20px auto;
+    border-radius: 20px 0px 0px 20px;
+    background: #dce9f1;
+    padding: 5px 20px 50px 20px;
+}
 .review-box{
-    width: 750px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
     margin: 20px auto 0px auto;
+    padding: 0px 5px;
 }
-.slid{
-    transform: translateX(50px);
+.review-box p{
+    width: 98%;
 }
-.sliding{
-    animation: slide 0.5s forwards;
-}
-@keyframes slide {
-    0%{
-        transform: translateX(50px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
-@media screen and (max-width: 900px) {
-    .slid{
-        transform: translateY(100px);
-    }
-    @keyframes slide {
-        0%{
-            transform: translateY(100px);
-        }
-        100%{
-            transform: translateY(0px);
-        }
+@media screen and (max-width: 800px) {
+    #reviews{
+        max-width: 90vw;
     }
 }
 @media screen and (max-width: 800px) {
@@ -328,15 +325,21 @@ header a{
     padding-bottom: 20px;
     z-index: 400;
 }
-.color2-color0-transition{
-    background-image: linear-gradient(325deg, #777 50%, #04c4c6 50%);
-    height: 50px;
+.color2-color3-transition{
+    background-image: linear-gradient(#222d35 10%, #adbec9 40%);
+    height: 130px;
     margin: -1px 0px;
 }
-.color0-color2-transition{
-    background-image: linear-gradient(#04c4c6 80%, #ababbc 80%);
-    height: 200px;
-    margin: -1px 0px;
+.color3-section{
+    background: #adbec9;
+    margin-top: -1px;
+    height: 700px;
+}
+.color3-section h2{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.374), rgba(255, 255, 255, 0));
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0px 20px 0px 20px;
 }
 .box-container{
     width: 900px;

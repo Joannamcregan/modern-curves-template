@@ -1,7 +1,6 @@
 const links = document.querySelectorAll('.desktop-link');
 const aboutLink = document.getElementById('about-link');
 const aboutSection = document.getElementById('about-section');
-const reviews = document.querySelectorAll('.review-box');
 const closePrivacyPolicy = document.getElementById('close-privacy-policy');
 const privacyPolicy = document.getElementById('privacy-policy');
 const openMobileMenu = document.getElementById('mobile-menu-icon');
@@ -13,9 +12,6 @@ const allowCookies = document.getElementById('allow-cookies');
 const disallowCookies = document.getElementById('disallow-cookies');
 
 window.onload = addBehavior();
-window.addEventListener("scroll", () => { 
-    handleSlideAnimation();
-});
 
 privacyPolicyLink.addEventListener("click", () => {
     privacyPolicy.classList.remove('hidden');
@@ -76,33 +72,11 @@ const elementOutofView = (el) => {
     );
 };
 
-const slideIn = (element) => {
-    element.classList.add("sliding");
-    setTimeout(()=>{
-        element.classList.remove("slid");
-    }, 500);
-};
-
-const slideOut = (element) => {
-    element.classList.add("slid");
-    element.classList.remove("sliding");
-};
-
-const handleSlideAnimation = () => {
-    reviews.forEach((el) => {
-        if (elementInView(el, 1.25)) {
-            slideIn(el);
-        } else if (elementOutofView(el)) {
-            slideOut(el)
-        }
-    })
-}
-
 const addUnderline = (link) => {
     links.forEach((el) => {
-        el.classList.remove("yellow-underline");
+        el.classList.remove("orange-text");
     })
-    link.classList.add("yellow-underline");
+    link.classList.add("orange-text");
 }
 
 const handleUnderlines = (sectionRef, linkRef) => {
@@ -112,32 +86,7 @@ const handleUnderlines = (sectionRef, linkRef) => {
     }
 }
 
-function scrollMarquee() {
-    const marquee = document.getElementById('marquee');
-    const clone = marquee.innerHTML;
-    const firstElement = marquee.children[0];
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    marquee.insertAdjacentHTML('beforeend', clone);
-    let i = 0;
-    setInterval(function () {
-        firstElement.style.marginLeft = `-${i}px`;
-        if (i > firstElement.clientWidth) {
-            i = 0;
-        }
-        i = i + 0.2;
-    }, 0);
-}
-
 function addBehavior() {
-    scrollMarquee();
     links.forEach((el) => {
         window.addEventListener("scroll", () => {
             handleUnderlines(el.getAttribute('href'), el);
