@@ -198,20 +198,48 @@ header a{
     height: 350px;
     max-width: 750px;
     position: relative;
+    overflow: hidden;
     margin: 0px auto 20px auto;
     border-radius: 20px 0px 0px 20px;
-    background: #dce9f1;
+    /* background: #dce9f1; */
     padding: 5px 20px 50px 20px;
 }
 .review-box{
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 360px;
     overflow-y: scroll;
-    margin: 20px auto 0px auto;
+    margin: 20px auto;
     padding: 0px 5px;
+    display: none;
+}
+.selected-review{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+}
+.slideOutLeft{
+    animation: slideOutLeft 3s forwards;
+}
+.slideOutRight{
+    animation: slideOutRight 3s forwards;
+}
+.slideInLeft{
+    animation: slideInLeft 3s 0.5s forwards;
+}
+.slideInRight{
+    animation: slideInRight 3s 0.5s forwards;
 }
 .review-box p{
     width: 98%;
+}
+#review-buttons{
+    width: fit-content;
+    margin: 10px auto;
+}
+#review-buttons img{
+    padding: 0px 20px;
 }
 @media screen and (max-width: 800px) {
     #reviews{
@@ -233,6 +261,48 @@ header a{
     }
     .review-box{
         width: 90vw;
+    }
+}
+@keyframes slideOutLeft {
+    0%{
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        top: -200px;
+        left: -1000px;
+        opacity: 0;
+    }
+}
+@keyframes slideOutRight {
+    0%{
+        top: 0;
+        right: 0;
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        top: -200px;
+        right: -1000px;
+        opacity: 0;
+    }
+}
+@keyframes slideInLeft {
+    0%{
+        top: -200px;
+        left: -1000px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        right: 0;
+        opacity: 1;
     }
 }
 .top-image{
