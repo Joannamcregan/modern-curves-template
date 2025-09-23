@@ -10,6 +10,9 @@ const privacyPolicyLink = document.getElementById('privacy-policy-link');
 const cookieOverlay = document.getElementById('cookie-banner');
 const allowCookies = document.getElementById('allow-cookies');
 const disallowCookies = document.getElementById('disallow-cookies');
+const leftArrow = document.getElementById('reviews--left-arrow');
+const rightArrow = document.getElementById('reviews--right-arrow');
+const reviews = document.getElementsByClassName('review-box');
 
 window.onload = addBehavior();
 
@@ -58,6 +61,8 @@ allowCookies.addEventListener("click", closeCookieOverlay);
 
 disallowCookies.addEventListener("click", closeCookieOverlay);
 
+rightArrow.addEventListener("click", scrollReviewsRight);
+
 const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;
     return (
@@ -84,6 +89,25 @@ const handleUnderlines = (sectionRef, linkRef) => {
     if (elementInView(section, 2)) {
         addUnderline(linkRef);
     }
+}
+
+function scrollReviewsRight() {
+    const currentSelected = document.getElementsByClassName('selected-review')[0];
+    const currentIndex = currentSelected.getAttribute('data', 'review');
+    const newSelected = document.querySelector('[data-review="' + (currentIndex + 1) + '"]');
+    currentSelected.classList.add('slideOutLeft');
+    setTimeout(()=>{        
+        newSelected.classList.add('slideInRight');
+    }, 200);
+    setTimeout(()=>{
+        currentSelected.classList.remove('selected-review');
+        newSelected.classList.add('selected-review');
+    }, 2200);
+    console.log(reviews.length);
+    if (parseInt(currentIndex) == (reviews.length - 2)){
+        rightArrow.classList.add('hidden');
+    }
+    leftArrow.classList.remove('hidden');
 }
 
 function addBehavior() {
