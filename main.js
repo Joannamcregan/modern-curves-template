@@ -93,21 +93,30 @@ const handleUnderlines = (sectionRef, linkRef) => {
 
 function scrollReviewsRight() {
     const currentSelected = document.getElementsByClassName('selected-review')[0];
-    const currentIndex = currentSelected.getAttribute('data', 'review');
+    const currentIndex = parseInt(currentSelected.getAttribute('data-review'));
     const newSelected = document.querySelector('[data-review="' + (currentIndex + 1) + '"]');
-    currentSelected.classList.add('slideOutLeft');
+    leftArrow.classList.add('hidden');
+    rightArrow.classList.add('hidden');
+    for (let i = 0; i < reviews.length; i++){
+        reviews[i].classList.remove('slideInLeft');
+        reviews[i].classList.remove('slideInRight');
+        reviews[i].classList.remove('slideOutLeft');
+        reviews[i].classList.remove('slideOutRight');
+    }
     setTimeout(()=>{        
+        currentSelected.classList.add('slideOutLeft');
         newSelected.classList.add('slideInRight');
-    }, 200);
+    }, 10);
     setTimeout(()=>{
         currentSelected.classList.remove('selected-review');
         newSelected.classList.add('selected-review');
-    }, 2200);
-    console.log(reviews.length);
-    if (parseInt(currentIndex) == (reviews.length - 2)){
-        rightArrow.classList.add('hidden');
+        if (parseInt(currentIndex) < (reviews.length - 2)){
+        rightArrow.classList.remove('hidden');
     }
     leftArrow.classList.remove('hidden');
+    }, 2200);
+    console.log(reviews.length - 2);
+    console.log(currentIndex);
 }
 
 function addBehavior() {
