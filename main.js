@@ -63,6 +63,8 @@ disallowCookies.addEventListener("click", closeCookieOverlay);
 
 rightArrow.addEventListener("click", scrollReviewsRight);
 
+leftArrow.addEventListener("click", scrollReviewsLeft);
+
 const elementInView = (el, dividend = 1) => {
     const elementTop = el.getBoundingClientRect().top;
     return (
@@ -97,26 +99,42 @@ function scrollReviewsRight() {
     const newSelected = document.querySelector('[data-review="' + (currentIndex + 1) + '"]');
     leftArrow.classList.add('hidden');
     rightArrow.classList.add('hidden');
-    for (let i = 0; i < reviews.length; i++){
-        reviews[i].classList.remove('slideInLeft');
-        reviews[i].classList.remove('slideInRight');
-        reviews[i].classList.remove('slideOutLeft');
-        reviews[i].classList.remove('slideOutRight');
-    }
     setTimeout(()=>{        
         currentSelected.classList.add('slideOutLeft');
         newSelected.classList.add('slideInRight');
     }, 10);
     setTimeout(()=>{
+        currentSelected.classList.remove('slideOutLeft');
+        newSelected.classList.remove('slideInRight');
         currentSelected.classList.remove('selected-review');
         newSelected.classList.add('selected-review');
         if (parseInt(currentIndex) < (reviews.length - 2)){
-        rightArrow.classList.remove('hidden');
-    }
+            rightArrow.classList.remove('hidden');
+        }
     leftArrow.classList.remove('hidden');
     }, 2200);
-    console.log(reviews.length - 2);
-    console.log(currentIndex);
+}
+
+function scrollReviewsLeft() {
+    const currentSelected = document.getElementsByClassName('selected-review')[0];
+    const currentIndex = parseInt(currentSelected.getAttribute('data-review'));
+    const newSelected = document.querySelector('[data-review="' + (currentIndex - 1) + '"]');
+    leftArrow.classList.add('hidden');
+    rightArrow.classList.add('hidden');
+    setTimeout(()=>{        
+        currentSelected.classList.add('slideOutRight');
+        newSelected.classList.add('slideInLeft');
+    }, 10);
+    setTimeout(()=>{
+        currentSelected.classList.remove('selected-review');
+        newSelected.classList.add('selected-review');
+        currentSelected.classList.remove('slideOutRight');
+        newSelected.classList.remove('slideInLeft');
+        if (parseInt(currentIndex) > 0){
+        leftArrow.classList.remove('hidden');
+    }
+    rightArrow.classList.remove('hidden');
+    }, 2200);
 }
 
 function addBehavior() {
