@@ -99,8 +99,8 @@ function scrollReviewsRight() {
     const newSelected = document.querySelector('[data-review="' + (currentIndex + 1) + '"]');
     leftArrow.classList.add('hidden');
     rightArrow.classList.add('hidden');
+    currentSelected.classList.add('slideOutLeft');
     setTimeout(()=>{        
-        currentSelected.classList.add('slideOutLeft');
         newSelected.classList.add('slideInRight');
     }, 10);
     setTimeout(()=>{
@@ -111,7 +111,7 @@ function scrollReviewsRight() {
         if (parseInt(currentIndex) < (reviews.length - 2)){
             rightArrow.classList.remove('hidden');
         }
-    leftArrow.classList.remove('hidden');
+        leftArrow.classList.remove('hidden');
     }, 2200);
 }
 
