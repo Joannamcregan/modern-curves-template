@@ -620,14 +620,19 @@ footer{
         top: -100px;
         opacity: 0.5;
     }
+    50%{
+        opacity: 1;
+    }
     100%{
         top: 40px;
-        opacity: 1;
     }
 }
 @keyframes slide-up {
     0%{
-        top: 4ch;
+        top: 40px;
+        opacity: 1;
+    }
+    50%{
         opacity: 1;
     }
     100%{
