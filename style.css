@@ -597,6 +597,44 @@ footer{
     z-index: 500;
     position: relative;
 }
+#contact-overlay{
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    background: #321f36;
+    color: white;
+    text-align: center;
+    padding: 140px 20px 100px 20px;
+}
+#contact--up-arrow{
+    margin-top: 20px;
+}
+.slideDown{
+    animation: slide-down 1s forwards;
+}
+.slideUp{
+    animation: slide-up 1s forwards;
+}
+@keyframes slide-down {
+    0%{
+        top: -100px;
+        opacity: 0.5;
+    }
+    100%{
+        top: 40px;
+        opacity: 1;
+    }
+}
+@keyframes slide-up {
+    0%{
+        top: 4ch;
+        opacity: 1;
+    }
+    100%{
+        top: -100px;
+        opacity: 0;
+    }
+}
 #privacy-policy-link{
     margin-bottom: 30px;
     text-decoration: underline;

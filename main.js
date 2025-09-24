@@ -13,8 +13,25 @@ const disallowCookies = document.getElementById('disallow-cookies');
 const leftArrow = document.getElementById('reviews--left-arrow');
 const rightArrow = document.getElementById('reviews--right-arrow');
 const reviews = document.getElementsByClassName('review-box');
+const callNow = document.getElementById('callNowDesktop');
+const contactOverlay = document.getElementById('contact-overlay');
+const upArrow = document.getElementById('contact--up-arrow');
 
 window.onload = addBehavior();
+
+upArrow.addEventListener("click", () => {
+    contactOverlay.classList.remove('slideDown');
+    contactOverlay.classList.add('slideUp');
+    setTimeout(() => {
+        contactOverlay.classList.add('hidden');
+        contactOverlay.classList.remove('slideUp');
+    }, 1000);
+})
+
+callNow.addEventListener("click", () => {
+    contactOverlay.classList.remove('hidden');
+    contactOverlay.classList.add('slideDown');
+})
 
 privacyPolicyLink.addEventListener("click", () => {
     privacyPolicy.classList.remove('hidden');

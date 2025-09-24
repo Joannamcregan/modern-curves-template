@@ -15,7 +15,7 @@
     <img src="./img/mobile_menu_icon.png" aria-label="mobile menu icon" class="mobile" id="mobile-menu-icon" />
     <div id="call-now">
         <a href="" class="mobile"><strong>Call Now</strong></a>
-        <span class="desktop"><strong>Call Now</strong></span>
+        <span class="desktop" id="callNowDesktop"><strong>Call Now</strong></span>
     </div>
     <nav class="desktop">
         <a href="#about-section" id="about-link" class="desktop-link">About</a>
@@ -139,7 +139,13 @@
                     <button id="disallow-cookies">Don't Allow</button>
                 </div>
             </div>
-            <div id="cookie-overlay"></div>
+        </section>
+        <section>
+            <div id="contact-overlay" class="hidden">
+                <h2>Call 555-555-5555</h2>
+                <p>Your call will be answered or returned by a knowledgeable member of our team.</p>
+                <img src="./img/up_arrow.png" alt="up-facing arrow" id="contact--up-arrow" />
+            </div>
         </section>
         <section id="mobile-menu" class="hidden">
             <img src="./img/purple_x.png" aria-label="close mobile menu" id="close-mobile-menu" class="overlay-close-button" />
