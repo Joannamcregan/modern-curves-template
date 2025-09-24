@@ -199,6 +199,7 @@ header a{
     max-width: 775px;
     position: relative;
     margin: 0px auto 20px auto;
+    overflow: hidden;
 }
 .review-box{
     width: 750px;
