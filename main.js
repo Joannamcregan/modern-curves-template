@@ -116,13 +116,13 @@ function scrollReviewsRight() {
     const newSelected = document.querySelector('[data-review="' + (currentIndex + 1) + '"]');
     leftArrow.classList.add('hidden');
     rightArrow.classList.add('hidden');
-    // currentSelected.classList.add('slideOutLeft');
+    currentSelected.classList.add('slideOutLeft');
     setTimeout(()=>{        
-        // newSelected.classList.add('slideInRight');
+        newSelected.classList.add('slideInRight');
     }, 10);
     setTimeout(()=>{
-        // currentSelected.classList.remove('slideOutLeft');
-        // newSelected.classList.remove('slideInRight');
+        currentSelected.classList.remove('slideOutLeft');
+        newSelected.classList.remove('slideInRight');
         currentSelected.classList.remove('selected-review');
         newSelected.classList.add('selected-review');
         if (parseInt(currentIndex) < (reviews.length - 2)){
@@ -139,14 +139,14 @@ function scrollReviewsLeft() {
     leftArrow.classList.add('hidden');
     rightArrow.classList.add('hidden');
     setTimeout(()=>{        
-        // currentSelected.classList.add('slideOutRight');
-        // newSelected.classList.add('slideInLeft');
+        currentSelected.classList.add('slideOutRight');
+        newSelected.classList.add('slideInLeft');
     }, 10);
     setTimeout(()=>{
         currentSelected.classList.remove('selected-review');
         newSelected.classList.add('selected-review');
-        // currentSelected.classList.remove('slideOutRight');
-        // newSelected.classList.remove('slideInLeft');
+        currentSelected.classList.remove('slideOutRight');
+        newSelected.classList.remove('slideInLeft');
         if (parseInt(currentIndex) > 1){
         leftArrow.classList.remove('hidden');
     }

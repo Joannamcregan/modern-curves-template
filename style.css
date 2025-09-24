@@ -197,12 +197,13 @@ header a{
 #reviews{
     height: 400px;
     max-width: 775px;
+    min-width: 95vw;
     position: relative;
     margin: 0px auto 20px auto;
     overflow: hidden;
 }
 .review-box{
-    width: 750px;
+    width: 95%;
     height: 360px;
     margin: 20px auto;
     padding: 0px 5px;
