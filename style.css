@@ -10,6 +10,15 @@
     font-family: 'bold';
     src: url(./fonts/Lmsans10Bold-8MVv2.otf);
 }
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 40px;
+}
+@media (prefers-reduced-motion){
+    html{
+        scroll-behavior: auto;
+    }
+}
 .hidden{
     display: none !important;
 }
