@@ -106,6 +106,7 @@ strong{
     padding: 20px 40px 20px 60px;
     background: #321f36;
     border-radius: 50% 30% 30% 30%;
+    cursor: pointer;
 }
 h1{
     font-family: display, serif;
