@@ -610,13 +610,22 @@ footer{
     position: relative;
 }
 #contact-overlay{
-    position: fixed;
-    top: -100px;
     width: 100%;
-    background: #321f36;
     color: white;
     text-align: center;
-    padding: 140px 20px 100px 20px;
+    position: fixed;
+    top: -100px;
+}
+.contact-overlay-main{
+    width: 100%;
+    background: #321f36;
+    margin-bottom: -2px;
+    padding: 60px 20px 10px 20px;
+}
+.contact-overlay-edge{
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to bottom, #321f36 50%, rgba(255, 255, 255, 0));
 }
 #contact--up-arrow{
     margin-top: 20px;
